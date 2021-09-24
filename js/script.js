@@ -40,90 +40,93 @@ function playCards(){
     
     if(this.classList[1]!="flip"){
         count++
-            if(count==12){
-                console.log('lose');
-                loseGame()
-            }
-            document.getElementById('moves').textContent=count
+        document.getElementById('moves').textContent=count
+            
+                
+            
             this.classList.add('flip')
             
             if(memoryClass.includes('js')){
                 if(whoWon.name==''||whoWon.name!='js'){
                     whoWon.name='js'
                     whoWon.count=1
-                }else{
-                    if(whoWon.count==2){
-                        console.log('js');
+                }else {
+                    whoWon.count++
+                    if(whoWon.count==3){
+                        console.log('js winner');
                         gameWinner()
                     }
-                    whoWon.count++
                 }
+                
             }else if(memoryClass.includes('angular')){
                 
                 if(whoWon.name=='' || whoWon.name!='angular'){
                     whoWon.name='angular'
                     whoWon.count=1
-                }else{
+                }else {
                     whoWon.count++
                     if(whoWon.count==3){
-                        console.log('angular');
+                        console.log('angular winner');
                         gameWinner()
                     }
                 }
+                
             }
             else if(memoryClass.includes("node")){
                 if(whoWon.name=='' || whoWon.name!='node'){
                     whoWon.name='node'
                     whoWon.count=1
-                }else{
+                }else {
                     whoWon.count++
                     if(whoWon.count==3){
-                        console.log('node');
+                        console.log('node winner');
                         gameWinner()
                     }
                 }
+                
             }
             else if(memoryClass.includes("react")){
                 if(whoWon.name=='' || whoWon.name!='react'){
                     whoWon.name='react'
                     whoWon.count=1
-                }else{
+                }else {
                     whoWon.count++
                     if(whoWon.count==3){
-                        console.log('react');
+                        console.log('react winner');
                         gameWinner()
                     }
                 }
+                
             }
             else if(memoryClass.includes("spring")){
                 if(whoWon.name=='' || whoWon.name!='spring'){
                     whoWon.name='spring'
                     whoWon.count=1
-                }else{
+                }else {
                     whoWon.count++
                     if(whoWon.count==3){
-                        console.log('spring');
+                        console.log('spring winner');
                         gameWinner()
                     }
                 }
+            }
                 
             }
             else if(memoryClass.includes("java")){
                 if(whoWon.name=='' || whoWon.name!='java'){
                     whoWon.name='java'
                     whoWon.count=1
-                }else{
+                }else {
                     whoWon.count++
                     if(whoWon.count==3){
-                        console.log('java');
+                        console.log('java winner');
                         gameWinner()
                     }
                 }
-            }
-           
-            console.log(whoWon,'count'+count);
-        }
-        
+            }if(count==12 && whoWon.count!=3){ 
+                loseGame()
+                }
+            
     }
     function startTimer(){
     clearTime= setInterval(function(){

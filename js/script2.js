@@ -4,16 +4,22 @@ let modalBox=document.querySelector(".game-over")
 function pauseGame(){
     modalBox.style.display="flex"
     clearInterval(clearTime)   
-   modalBoxContent.innerHTML=`<h1>Pause Menu</h1>
+    
+   document.querySelector(".game-over-menu").innerHTML=`<h1>Pause Menu</h1>
    <button  type="button"  class="btn btn-outline-warning" onclick="resetGame()">Retry</button>
-   <button  type="button"  class="btn btn-outline-danger" onclick="exitGame()">exit</button>`
-    startTimer()
+   <button  type="button"  class="btn btn-outline-danger" onclick="exitGame()">exit</button>
+   <button type="button" id="close" class="btn btn-danger" onclick="closeMenu()">Close</button>
+   `
+
+   startTimer()
+    
 }
 function loseGame(){
     modalBox.style.display="flex"
     clearInterval(clearTime)   
     // alert('game finished')
-   modalBoxContent.innerHTML=`<h1>You Lose</h1>
+    console.log('game finished');
+   document.querySelector(".game-over-menu").innerHTML=`<h1>You Lose</h1>
    <button  type="button"  class="btn btn-outline-warning" onclick="resetGame()">Retry</button>
    <button  type="button"  class="btn btn-outline-danger" onclick="exitGame()">exit</button>`
 }
@@ -38,8 +44,8 @@ function resetGame(){
     count=0;
     timer=0;
     
-        document.getElementById('moves').textContent=count
-showTime.textContent=timer
+    document.getElementById('moves').textContent=count
+    showTime.textContent=timer
     memoryCard.forEach(obj=>{
         obj.classList.remove('flip')
     })
