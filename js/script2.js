@@ -54,6 +54,7 @@ function resetGame(){
     whoWon.count=0
     
     modalBox.style.display="none"
+    reshuffleCards()
     startTimer()
 }
 function exitGame(){

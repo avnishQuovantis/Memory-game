@@ -21,19 +21,19 @@ function letPlay(){
 }
 
 let won=false
-function Game(){
+function reshuffleCards(){
     for(let i=0;i<secondarPic.length;i++){
         let length=cardPhoto.length-1
         let random=Math.floor(Math.random()*length)
         secondarPic[i].alt=cardPhoto[random]
         secondarPic[i].src=cardPhoto[random]
     }
+}
+reshuffleCards()
     for(let i=0;i<memoryCard.length;i++){
         memoryCard[i].addEventListener("click",playCards)
     }
-}
-Game()
-    
+
 
 function playCards(){
     let memoryClass=this.childNodes[3].alt
