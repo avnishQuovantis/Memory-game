@@ -1,12 +1,4 @@
-let cards={
-    'js':0,
-    'angular':0,
-    'react':0,
-    'node':0,
-    'java':0,
-    'spring':0,
-    "MongolDb":0
-}
+
 let whoWon={name:'',count:0}
 let timer=0
 let hours,minutes,seconds

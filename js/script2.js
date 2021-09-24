@@ -46,10 +46,7 @@ showTime.textContent=timer
 
     whoWon.name=''
     whoWon.count=0
-    for(let c in cards){
-        cards[c]=0
-
-    }
+    
     modalBox.style.display="none"
     startTimer()
 }
