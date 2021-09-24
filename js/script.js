@@ -115,7 +115,7 @@ function playCards(){
                 }
             }
            
-            // console.log(whoWon);
+            console.log(whoWon);
         }
         
     }
