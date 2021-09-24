@@ -11,7 +11,7 @@ function pauseGame(){
    <button type="button" id="close" class="btn btn-danger" onclick="closeMenu()">Close</button>
    `
 
-   startTimer()
+//    startTimer()
     
 }
 function loseGame(){
